@@ -46,32 +46,35 @@ It features role-based dashboards for **Admins**, **Trainers**, and **Students**
 
 ## ⚙️ How to Run Locally
 
-### 1. Clone the Repository
-```bash
-Run Backend (Spring Boot)
+1. Run Backend (Spring Boot)
 Open backend in your IDE (e.g., IntelliJ or Eclipse)
 
 Set DB in application.properties
 
 Run EdumanageBackendApplication.java
 
-Run Frontend (Angular)
+2. Run Frontend (Angular)
+bash
+Copy code
 cd frontend
 npm install
 ng serve
-
+📦 Folder Structure
+lua
+Copy code
 EduManage_FullStack/
 │
 ├── backend/       --> Spring Boot + PostgreSQL backend
 │
 └── frontend/      --> Angular application with dashboards
 
+📸 Screenshots
+Added below
+
 👨‍💻 Developed By
 Aditya Malode
 📫 LinkedIn - www.linkedin.com/in/aditya-malode-471545255
 
-git clone https://github.com/AdityaMalode05/EduManage_FullStack.git
-cd EduManage_FullStack
 ![Screenshot (118)](https://github.com/user-attachments/assets/34570e5c-77a0-4de2-9853-f2f294efd11b)
 ![Screenshot (117)](https://github.com/user-attachments/assets/b4cc7026-368d-4164-881c-a9dc2673f162)
 ![Screenshot (116)](https://github.com/user-attachments/assets/1149e13d-3acc-43d1-98ac-adb678d2b260)
@@ -92,3 +95,10 @@ cd EduManage_FullStack
 eenshot (113)](https://github.com/user-attachments/assets/5680efe2-ed94-4ff3-8646-e36547fd8950)
 ![Screenshot (112)](https://github.com/user-attachments/assets/62d49261-02a8-4f08-a59a-4821da2c9802)
 ![Screenshot (119)](https://github.com/user-attachments/assets/bbd6ebb8-631a-48c7-9ecf-15ec8e98c47a)
+
+
+### 1. Clone the Repository
+```bash
+
+git clone https://github.com/AdityaMalode05/EduManage_FullStack.git
+cd EduManage_FullStack
