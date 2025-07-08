@@ -55,13 +55,13 @@ Run EdumanageBackendApplication.java
 
 2. Run Frontend (Angular)
 bash
-Copy code
+
 cd frontend
 npm install
 ng serve
+
 📦 Folder Structure
-lua
-Copy code
+
 EduManage_FullStack/
 │
 ├── backend/       --> Spring Boot + PostgreSQL backend
