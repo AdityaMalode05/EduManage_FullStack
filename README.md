@@ -30,6 +30,18 @@ It features role-based dashboards for **Admins**, **Trainers**, and **Students**
 - Submit assignments with file upload
 - View attendance records
 - Track graded submissions
+![Screenshot (130)](https://github.com/user-attachments/assets/e078aee7-49f4-46be-be0e-44cd5cbdb6a4)
+![Screenshot (129)](https://github.com/user-attachments/assets/ed33e63f-ab97-470f-a5f0-bc236068072d)
+![Screenshot (128)](https://github.com/user-attachments/assets/7dfba8ee-a626-403b-b132-5b3f64a0941a)
+![Screenshot (127)](https://github.com/user-attachments/assets/679f1dd0-3a3b-43ea-a335-409fe9323169)
+![Screenshot (126)](https://github.com/user-attachments/assets/155c4445-fc86-4b19-aed2-3f79f55a5b29)
+![Screenshot (125)](https://github.com/user-attachments/assets/907b03d8-9d82-4af7-aee7-47ec94806790)
+![Screenshot (124)](https://github.com/user-attachments/assets/cdda3a7d-fa7a-4405-9964-31bd052af68d)
+![Screenshot (123)](https://github.com/user-attachments/assets/088680cd-5b03-42fa-bfe3-264ba64043c2)
+![Screenshot (122)](https://github.com/user-attachments/assets/2f101424-938a-45f1-a5c0-a536f2f212f3)
+![Screenshot (121)](https://github.com/user-attachments/assets/343d19cf-23b0-4f54-8a29-ea3e792c8275)
+![Screenshot (120)](https://github.com/user-attachments/assets/37d85e61-1e5d-4ce6-9f01-8ea34e81ffbc)
+![Screenshot (131)](https://github.com/user-attachments/assets/39c41116-f2f2-4e86-96c4-dc0874ece65b)
 
 ---
 
