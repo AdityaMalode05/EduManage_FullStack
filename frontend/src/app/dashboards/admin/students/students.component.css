@@ -1,0 +1,244 @@
+/* Wrapper */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Main content area */
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.dashboard-content h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.header{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+button {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.edit {
+  background-color: #34bcd2;
+}
+
+.edit:hover {
+  background-color: #1e9aae;
+}
+
+.delete {
+  background-color: #ff0019;
+}
+
+.delete:hover {
+  background-color: #d5061b;
+}
+
+/* Custom modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+   font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.modal-box h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-box form input {
+  max-width: 92.5%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-actions button {
+  margin-left: 10px;
+  padding: 8px 14px;
+}
+
+.modal-actions .register {
+  background: #eddc23;
+  color: black;
+}
+
+.modal-actions .register:hover {
+   background: #e0d01e;
+}
+
+.modal-actions .cancel {
+  background: #7d7c7c;
+}
+
+.modal-actions .cancel:hover {
+   background: #938e8e;
+}
+
+
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 16px;
+  max-width: 50%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+.search-icon {
+  font-size: 18px;
+  color: #007bff;
+}
+
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.modal-box form input,
+.modal-box form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.modal-box form input:focus,
+.modal-box form select:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.modal-box form select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.save-changes{
+   background: #eddc23;
+  color: black;
+}
+
+.save-changes:hover {
+   background: #e0d01e;
+}
+

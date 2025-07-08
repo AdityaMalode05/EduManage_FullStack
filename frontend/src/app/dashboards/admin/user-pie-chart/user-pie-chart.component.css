@@ -1,0 +1,48 @@
+/* .chart-wrapper {
+  background: white;
+  padding: 40px 80px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.chart-wrapper h3 {
+  margin: 0px 150px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+*/
+
+.chart-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.chart-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+  max-width: 100% !important;
+  max-height: 300px !important;
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

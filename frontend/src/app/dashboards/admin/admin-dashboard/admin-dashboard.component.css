@@ -1,0 +1,63 @@
+/* Wrapper for sidebar and main content */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Main content area */
+.dashboard-content {
+  flex: 1;
+  padding: 5px 50px;
+  background: #f4f6f8;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/* Section for charts and activities */
+.chart-section {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+/* Make sure both sections are equal width */
+.chart-section app-user-pie-chart,
+.chart-section app-recent-activities {
+  flex: 1;
+  min-width: 340px;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .chart-section {
+    flex-direction: column;
+  }
+  .chart-section app-user-pie-chart,
+  .chart-section app-recent-activities {
+    max-width: 100%;
+  }
+}
+
+.dashboard-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 20px;
+}
+
+/* Equal width for both components */
+app-user-pie-chart,
+app-recent-activity {
+  flex: 1;
+  max-width: 48%;
+}

@@ -1,0 +1,24 @@
+<div class="sidebar">
+  <div class="logo">EduManage</div>
+  <nav>
+    <a routerLink="/Admin-Dashboard" routerLinkActive="active"><i class="fa-solid fa-chart-line"></i>&nbsp; Dashboard</a>
+    <a routerLink="/Students" routerLinkActive="active"><i class="fa-solid fa-user-graduate"></i>&nbsp; Students</a>
+    <a routerLink="/Trainers" routerLinkActive="active"><i class="fa-solid fa-person-chalkboard"></i>&nbsp; Trainers</a>
+    <a routerLink="/Courses" routerLinkActive="active"><i class="fa-solid fa-book"></i>&nbsp; Courses</a>
+    <a routerLink="/Batches" routerLinkActive="active"><i class="fa-solid fa-list-ul"></i>&nbsp; Batches</a>
+    <a (click)="openLogoutModal()"><i class="fa-solid fa-right-from-bracket"></i>&nbsp; Logout</a>
+  </nav>
+</div>
+
+
+<!-- Logout Confirmation Modal -->
+<div class="modal-overlay" *ngIf="showLogoutModal">
+  <div class="modal-box">
+    <h3>Confirm Logout</h3>
+    <p>Are you sure you want to logout?</p>
+    <div class="modal-actions">
+      <button (click)="confirmLogout()">Yes, Logout</button>
+      <button class="cancel" (click)="cancelLogout()">Cancel</button>
+    </div>
+  </div>
+</div>

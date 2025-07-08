@@ -1,0 +1,33 @@
+<div class="dashboard-wrapper">
+  <app-trainer-sidebar></app-trainer-sidebar>
+
+  <div class="dashboard-content">
+    <h2 class="page-title">Mark Attendance</h2>
+
+    <div *ngIf="students.length > 0; else noStudents">
+      <div class="student-card" *ngFor="let s of students">
+        <div class="student-info">
+          <div class="avatar">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <div class="info">
+            <h3>{{ s.name }}</h3>
+            <p>{{ s.email }}</p>
+          </div>
+        </div>
+        <div class="attendance-actions">
+          <button class="present-btn" (click)="markAttendance(s.id!, true)">
+            ✔ Present
+          </button>
+          <button class="absent-btn" (click)="markAttendance(s.id!, false)">
+            ✘ Absent
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noStudents>
+      <p class="no-data">No students found in your batch.</p>
+    </ng-template>
+  </div>
+</div>

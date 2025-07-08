@@ -1,0 +1,94 @@
+/* Wrapper layout */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Main dashboard content */
+.dashboard-content {
+  flex: 1;
+  padding: 5px 50px;
+  background: #f4f6f8;
+  overflow-y: auto;
+}
+
+/* Header section */
+.logo-2 h1 {
+  font-size: 30px;
+  color: #1f2e4a;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Welcome message box */
+.welcome-box {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.welcome-box h2 {
+  font-size: 26px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.welcome-box .quote {
+  font-style: italic;
+  font-size: 16px;
+  color: #ff0000;
+  font-weight: 500;
+}
+
+/* Summary cards section */
+.summary-cards {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.summary-cards .card {
+  flex: 1;
+  min-width: 220px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summary-cards .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.summary-cards .card .label {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.summary-cards .card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* Placeholder (for future sections or fallback) */
+.placeholder {
+  font-size: 18px;
+  color: #555;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  margin-top: 30px;
+  text-align: center;
+}

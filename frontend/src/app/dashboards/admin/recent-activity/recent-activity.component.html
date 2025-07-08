@@ -1,0 +1,14 @@
+<div class="activity-card">
+  <h3><i class="fa-solid fa-bullhorn"></i> Recent Activity</h3>
+
+  <div class="activity-scroll">
+    <ul>
+      <li *ngFor="let activity of activities">
+        <i class="fa-solid fa-circle-check icon"></i> <strong>
+          <p>{{ activity.message }}</p>
+        </strong>
+      </li>
+    </ul>
+
+  </div>
+</div>

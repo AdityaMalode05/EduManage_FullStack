@@ -1,0 +1,43 @@
+<div class="dashboard-wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">EduManage</div>
+    <nav>
+      <a routerLink="/Student-Dashboard" routerLinkActive="active">
+        <i class="fa-solid fa-chart-line"></i>&nbsp; Dashboard
+      </a>
+
+      <a routerLink="/My-Tasks" routerLinkActive="active">
+        <i class="fa-solid fa-book"></i>&nbsp; My Tasks
+      </a>
+
+      <a routerLink="/Submit-Tasks" routerLinkActive="active">
+        <i class="fa-solid fa-upload"></i>&nbsp; Submissions
+      </a>
+
+      <a routerLink="/Student-Attendence" routerLinkActive="active">
+        <i class="fa-solid fa-calendar-check"></i>&nbsp; Attendance
+      </a>
+
+      <a routerLink="/Student-Profile" routerLinkActive="active">
+        <i class="fa-regular fa-user"></i>&nbsp; Profile
+      </a>
+
+      <a (click)="openLogoutModal()">
+        <i class="fa-solid fa-right-from-bracket"></i>&nbsp; Logout
+      </a>
+    </nav>
+  </div>
+
+  <!-- Logout Modal -->
+  <div class="modal-overlay" *ngIf="showLogoutModal">
+    <div class="modal-box">
+      <h3>Confirm Logout</h3>
+      <p>Are you sure you want to logout?</p>
+      <div class="modal-actions">
+        <button (click)="confirmLogout()">Yes, Logout</button>
+        <button class="cancel" (click)="cancelLogout()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

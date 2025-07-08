@@ -1,0 +1,22 @@
+<div class="dashboard-wrapper">
+  <app-trainer-sidebar></app-trainer-sidebar>
+
+  <div class="dashboard-content">
+    <h2>Assigned Tasks</h2>
+
+    <div class="task-list" *ngIf="tasks.length > 0; else noTasks">
+      <div class="task-card" *ngFor="let t of tasks">
+        <h3>{{ t.title }}</h3>
+        <p><strong>Description:</strong> {{ t.description }}</p>
+        <p><strong>Due Date:</strong> {{ t.dueDate | date: 'mediumDate' }}</p>
+        <p><strong>Batch:</strong> {{ t.batch.name || 'N/A' }}</p>
+      </div>
+    </div>
+
+    <ng-template #noTasks>
+      <div class="no-tasks">
+        <p>No tasks assigned yet.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

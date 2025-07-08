@@ -1,0 +1,57 @@
+.activity-card {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  width: 100%;
+  height: 362px; /* Match pie chart height */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #000000;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.activity-card h3 i {
+  margin-right: 8px;
+  color: #000000;
+}
+
+.activity-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.activity-scroll ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-scroll li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.activity-scroll .icon {
+  margin-right: 10px;
+  color: #28a745;
+  font-size: 14px;
+}

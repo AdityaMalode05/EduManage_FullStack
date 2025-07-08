@@ -1,0 +1,153 @@
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #003973, #005fa3);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  color: #fff;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.role-selection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.role i {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+.role span {
+  font-size: 14px;
+}
+
+.role.active {
+  background-color: #ff2a2a;
+  width: 57px;
+  border-radius: 50px;
+}
+.message b{
+    color: #fff;
+}
+
+form input[type='email'],
+form input[type='password'] {
+  width: 93%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+}
+form input::placeholder {
+  color: #ddd;
+}
+
+form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f82f2f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+form button:hover {
+  background-color: #ff0000;
+}
+
+.message {
+  margin-top: 15px;
+}
+.message b {
+  color: #fff;
+}
+
+/* Modern Toast Styles */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 300px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: slideInUp 0.4s ease, fadeOut 0.5s ease 2.5s forwards;
+  z-index: 1000;
+}
+
+.toast.success {
+  background: linear-gradient(135deg, #28a745, #218838);
+  border-left: 6px solid #1e7e34;
+}
+
+.toast.error {
+  background: linear-gradient(135deg, #dc3545, #bd2130);
+  border-left: 6px solid #a71d2a;
+}
+
+.toast i {
+  font-size: 18px;
+}
+
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}

@@ -1,0 +1,65 @@
+.summary-cards {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 180px;
+  
+}
+
+.card .label {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card h2 {
+  font-size: 28px;
+  color: #007bff;
+}
+
+/* Align and beautify summary cards container */
+app-summary-cards {
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* CARD DESIGN (override child styles here if needed) */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Label inside cards */
+.card .label {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Animated counter number */
+.card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #007bff;
+  animation: growIn 0.6s ease-in;
+}

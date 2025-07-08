@@ -1,0 +1,42 @@
+<div class="dashboard-wrapper">
+  <app-trainer-sidebar></app-trainer-sidebar>
+
+  <div class="dashboard-content">
+    <h2>Grade Submissions</h2>
+
+    <div *ngIf="submissions.length > 0; else noSubmissions">
+      <table class="submissions-table">
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Task</th>
+            <th>Submitted Date</th>
+            <th>File</th>
+            <th>Grade</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of submissions">
+            <td>{{ s.student?.name }}</td>
+            <td>{{ s.task?.title }}</td>
+            <td>{{ s.submissionDate }}</td>
+            <td>
+              <a [href]="s.fileUrl" target="_blank">{{ s.fileName }}</a>
+            </td>
+            <td>
+              <input type="text" [(ngModel)]="s.grade" placeholder="Grade..." />
+            </td>
+            <td>
+              <button (click)="gradeSubmission(s.id, s.grade)">Submit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #noSubmissions>
+      <p>No submissions found.</p>
+    </ng-template>
+  </div>
+</div>

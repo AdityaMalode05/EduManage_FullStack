@@ -1,0 +1,62 @@
+<div class="dashboard-wrapper">
+  <app-trainer-sidebar></app-trainer-sidebar>
+
+  <div class="dashboard-content">
+    <div class="profile-header">
+      <h2>Trainer Profile</h2>
+    </div>
+
+    <div class="profile-container">
+      <div class="profile-card">
+        <!-- ✏️ Edit Icon -->
+        <div class="edit-icon" (click)="showModal = true">
+          <i class="fa-solid fa-pen"></i>
+        </div>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Profile" class="profile-img" />
+
+        <h3>{{ trainer.name }}</h3>
+        <h4 class="subtitle">Trainer | {{ trainer.course?.name || 'No course' }}</h4>
+
+        <p class="bio">
+          A passionate trainer dedicated to helping students learn and grow in the {{ trainer.batch?.name || 'N/A' }}.
+        </p>
+
+        <!-- 👤 Details -->
+        <div class="details">
+          <p><strong>Email:</strong> {{ trainer.email }}</p>
+          <p><strong>Password:</strong> {{ trainer.password }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔧 Modal -->
+    <div class="modal-backdrop" *ngIf="showModal">
+      <div class="modal-content">
+        <h3>Edit Profile</h3>
+
+        <form>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="trainer.name" name="name" />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" [(ngModel)]="trainer.email" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="text" [(ngModel)]="trainer.password" name="password" />
+          </div>
+
+          <div class="btns">
+            <button type="button" (click)="saveProfile()">Save</button>
+            <button type="button" class="cancel" (click)="showModal = false">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

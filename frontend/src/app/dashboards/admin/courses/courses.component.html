@@ -1,0 +1,53 @@
+<div class="dashboard-wrapper">
+  <app-sidebar></app-sidebar>
+
+  <div class="dashboard-content">
+    <div class="courses-page">
+      <div class="header-row">
+        <h2>Courses</h2>
+        <button class="add-btn" (click)="openModal()">+ Add Course</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of courses">
+            <td>{{ c.id }}</td>
+            <td>{{ c.name }}</td>
+            <td>
+              <button class="edit" (click)="edit(c.id!)">Edit</button>
+              <button class="delete" (click)="delete(c.id!)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Custom Modal for Add/Edit -->
+  <div class="modal-overlay" *ngIf="showModal">
+    <div class="modal-box">
+      <h3>{{ isEditing ? 'Edit Course' : 'Add Course' }}</h3>
+      <form>
+        <input
+          type="text"
+          [(ngModel)]="c1.name"
+          name="name"
+          placeholder="Enter Course Name"
+        />
+      </form>
+      <div class="modal-actions">
+        <button (click)="saveCourse()">
+          {{ isEditing ? 'Update' : 'Save' }}
+        </button>
+        <button class="cancel" (click)="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

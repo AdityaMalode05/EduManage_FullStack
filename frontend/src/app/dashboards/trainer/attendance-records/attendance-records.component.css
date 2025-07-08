@@ -1,0 +1,89 @@
+/* Wrapper */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Main content area */
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.dashboard-content h2 {
+ font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.attendance-table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 15px;
+  color: #333;
+}
+
+.attendance-table thead th{
+  background-color: #007bff;
+  color: white;
+}
+
+.status-present {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.status-absent {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.student-info i {
+  margin-right: 6px;
+  color: #007bff;
+}
+
+.student-info {
+  display: block;
+  font-weight: 500;
+  color: #1f2e4a;
+}
+
+.student-info small {
+  color: #777;
+  font-size: 13px;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* Smooth fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

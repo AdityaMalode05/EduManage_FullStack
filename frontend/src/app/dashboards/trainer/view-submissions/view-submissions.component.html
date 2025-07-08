@@ -1,0 +1,42 @@
+<div class="dashboard-wrapper">
+    <app-trainer-sidebar></app-trainer-sidebar>
+    <div class="dashboard-content">
+        <h2>View All Submissions</h2>
+
+        <table class="submissions-table" *ngIf="submissions.length > 0; else noData">
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Task</th>
+                    <th>Submitted On</th>
+                    <th>Status</th>
+                    <th>Grade</th>
+                    <th>File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let s of submissions">
+                    <td>{{ s.student?.name }}</td>
+                    <td>{{ s.task?.title }}</td>
+                    <td>{{ s.submissionDate }}</td>
+                    <td>
+                        <span [ngClass]="{
+              'status-on-time': s.status === 'On Time',
+              'status-late': s.status === 'Late',
+              'status-graded': s.status === 'Graded'
+            }">{{ s.status }}</span>
+                    </td>
+                    <td>{{ s.grade || 'N/A' }}</td>
+                    <td>
+                        <a *ngIf="s.fileUrl" [href]="s.fileUrl" target="_blank">Download</a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <ng-template #noData>
+            <p>No submissions found.</p>
+        </ng-template>
+    </div>
+</div>

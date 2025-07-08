@@ -1,0 +1,19 @@
+<div class="dashboard-wrapper">
+  <app-student-sidebar></app-student-sidebar>
+
+  <div class="dashboard-content">
+    <h2>My Tasks</h2>
+
+    <ng-container *ngIf="tasks && tasks.length > 0; else noTasks">
+      <div class="task-card" *ngFor="let task of tasks">
+        <h3>{{ task.title }}</h3>
+        <p><strong>Description:</strong> {{ task.description }}</p>
+        <p><strong>Due Date:</strong> {{ task.dueDate | date: 'mediumDate' }}</p>
+      </div>
+    </ng-container>
+
+    <ng-template #noTasks>
+      <p>No tasks assigned yet.</p>
+    </ng-template>
+  </div>
+</div>

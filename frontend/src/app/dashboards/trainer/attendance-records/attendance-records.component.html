@@ -1,0 +1,39 @@
+<div class="dashboard-wrapper">
+  <app-trainer-sidebar></app-trainer-sidebar>
+
+  <div class="dashboard-content">
+    <h2>Attendance Records</h2>
+
+    <div *ngIf="records.length > 0; else noData">
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Student</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of records">
+            <td>{{ r.date | date: 'mediumDate' }}</td>
+            <td>
+              <span class="student-info">
+                {{ r.student?.name }} <br />
+                <small>{{ r.student?.email }}</small>
+              </span>
+            </td>
+            <td>
+              <span [ngClass]="r.present ? 'status-present' : 'status-absent'">
+                {{ r.present ? 'Present' : 'Absent' }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #noData>
+      <p class="no-data">No attendance records found.</p>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="register-wrapper">
+    <div class="register-box">
+        <h1 class="brand">📊EduManage</h1>
+        <p class="subtitle">Register as</p>
+
+        <!-- Role selection -->
+        <div class="role-selection">
+            <!-- <div
+        class="role"
+        [class.active]="role === 'Admin'"
+        (click)="role = 'Admin'"
+      >
+        <i class="fa-solid fa-user-tie"></i>
+        <span>Admin</span>
+      </div> -->
+
+            <div class="role" [class.active]="role === 'Trainer'" (click)="role = 'Trainer'">
+                <i class="fa-solid fa-person"></i>
+                <span>Trainer</span>
+            </div>
+
+            <div class="role" [class.active]="role === 'Student'" (click)="role = 'Student'">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Student</span>
+            </div>
+        </div>
+
+        <form (ngSubmit)="onRegister()">
+            <input type="text" [(ngModel)]="name" name="name" placeholder="Full Name" required />
+            <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+            <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
+
+            <!-- Course Dropdown -->
+            <select [(ngModel)]="courseId" name="courseId" required
+                [ngClass]="{ 'placeholder-option': courseId === null }">
+                <option [ngValue]="null" disabled hidden>Select Course</option>
+                <option *ngFor="let course of courses" [ngValue]="course.id">{{ course.name }}</option>
+            </select>
+
+            <!-- Batch Dropdown -->
+            <select [(ngModel)]="batchId" name="batchId" required
+                [ngClass]="{ 'placeholder-option': batchId === null }">
+                <option [ngValue]="null" disabled hidden>Select Batch</option>
+                <option *ngFor="let batch of batches" [ngValue]="batch.id">{{ batch.name }}</option>
+            </select>
+
+
+            <button type="submit">Register</button>
+            <p class="message">Already have an account?<a routerLink="/"><b> Login</b></a></p>
+        </form>
+
+
+        <div *ngIf="successMessage" class="toast success">
+            <i class="fa-solid fa-circle-check"></i> {{ successMessage }}
+        </div>
+
+        <div *ngIf="errorMessage" class="toast error">
+            <i class="fa-solid fa-circle-exclamation"></i> {{ errorMessage }}
+        </div>
+    </div>
+</div>

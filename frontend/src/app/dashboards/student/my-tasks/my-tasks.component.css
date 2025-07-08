@@ -1,0 +1,36 @@
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f8;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px 50px;
+  background-color: #f4f6f8;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.task-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.task-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.task-card p {
+  margin: 5px 0;
+  color: #444;
+}

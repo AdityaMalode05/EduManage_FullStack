@@ -1,0 +1,33 @@
+<div class="dashboard-wrapper">
+  <app-trainer-sidebar></app-trainer-sidebar>
+
+  <div class="dashboard-content">
+    <div class="batches-page">
+      <h2>My Batches</h2>
+
+      <div class="batch-cards" *ngIf="batches.length > 0; else noData">
+        <div class="batch-card" *ngFor="let b of batches">
+          <h3>Batch: {{ b.name }}</h3>
+          <p><strong>ID:</strong> {{ b.id }}</p>
+
+          <div *ngIf="b.students?.length; else noStudents">
+            <h4>Students:</h4>
+            <ul>
+              <li *ngFor="let student of b.students">
+                {{ student.name }} ({{ student.email }})
+              </li>
+            </ul>
+          </div>
+
+          <ng-template #noStudents>
+            <p>No students assigned yet.</p>
+          </ng-template>
+        </div>
+      </div>
+
+      <ng-template #noData>
+        <p>No batch assigned to you.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

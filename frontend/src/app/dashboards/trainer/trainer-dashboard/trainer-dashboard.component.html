@@ -1,0 +1,31 @@
+<div class="dashboard-wrapper">
+  <app-trainer-sidebar></app-trainer-sidebar>
+
+  <div class="dashboard-content">
+    <div class="logo-2">
+      <h1>Trainer Dashboard</h1>
+    </div>
+
+    <!-- Welcome message section -->
+    <div class="welcome-box">
+      <h2>Welcome, {{ trainerName }} !👋</h2>
+      <p class="quote">"{{ selectedQuote }}"</p>
+    </div>
+
+
+    <div class="summary-cards">
+      <div class="card">
+        <div class="label"><i class="fa-solid fa-list-ul"></i> Batches</div>
+        <h2>{{ batchCount }}</h2>
+      </div>
+      <div class="card">
+        <div class="label"><i class="fa-solid fa-user-graduate"></i> Students</div>
+        <h2>{{ studentCount }}</h2>
+      </div>
+      <div class="card">
+        <div class="label"><i class="fa-solid fa-book"></i> Tasks</div>
+        <h2>{{ taskCount }}</h2>
+      </div>
+    </div>
+  </div>
+</div>

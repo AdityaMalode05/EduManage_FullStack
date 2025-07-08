@@ -1,0 +1,60 @@
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f8;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #f4f6f8;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.submissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.submissions-table th,
+.submissions-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.submissions-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.status-on-time {
+  color: green;
+  font-weight: bold;
+}
+
+.status-late {
+  color: red;
+  font-weight: bold;
+}
+
+.status-graded {
+  color: #007bff;
+  font-weight: bold;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}

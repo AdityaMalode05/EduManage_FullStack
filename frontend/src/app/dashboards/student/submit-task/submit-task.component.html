@@ -1,0 +1,25 @@
+<div class="dashboard-wrapper">
+  <app-student-sidebar></app-student-sidebar>
+  <div class="dashboard-content">
+    <h2>Submit Task</h2>
+
+    <form (ngSubmit)="submitTask()">
+      <label>Select Task</label>
+      <select [(ngModel)]="selectedTaskId" name="task" required>
+        <option value="" disabled selected>Select a task</option>
+        <option *ngFor="let task of tasks" [value]="task.id">{{ task.title }}</option>
+      </select>
+
+      <label>Submission Title</label>
+      <input type="text" [(ngModel)]="title" name="title" required />
+
+      <label>Short Description (optional)</label>
+      <textarea [(ngModel)]="description" name="description"></textarea>
+
+      <label>Upload File (PDF/DOC/DOCX)</label>
+      <input type="file" (change)="onFileChange($event)" accept=".pdf,.doc,.docx" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="login-wrapper">
+  <div class="login-box">
+    <h1 class="brand">📊EduManage</h1>
+    <p class="subtitle">I am</p>
+
+    <div class="role-selection">
+      <div class="role" [class.active]="role === 'Admin'" (click)="role = 'Admin'">
+        <i class="fa-solid fa-user-tie"></i>
+        <span>Admin</span>
+      </div>
+      <div class="role" [class.active]="role === 'Trainer'" (click)="role = 'Trainer'">
+        <i class="fa-solid fa-person"></i>
+        <span>Trainer</span>
+      </div>
+      <div class="role" [class.active]="role === 'Student'" (click)="role = 'Student'">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Student</span>
+      </div>
+    </div>
+
+    <form (ngSubmit)="onLogin()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email address" required />
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
+
+      <label><input type="checkbox" class="remember-me" /> Remember Me</label>
+      <button type="submit">Login</button>
+      <p class="message">Not registered?<a routerLink="/Register"><b> Create an account</b></a></p>
+    </form>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+
+  <!-- ✅ Move toasts outside of .login-box -->
+  <div *ngIf="successMessage" class="toast success">
+  <i class="fa-solid fa-circle-check"></i> {{ successMessage }}
+</div>
+
+<div *ngIf="errorMessage" class="toast error">
+  <i class="fa-solid fa-circle-exclamation"></i> {{ errorMessage }}
+</div>
+
+</div>

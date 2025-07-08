@@ -1,0 +1,71 @@
+<div class="dashboard-wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">EduManage</div>
+    <nav>
+      <a routerLink="/Trainer-Dashboard" routerLinkActive="active">
+        <i class="fa-solid fa-chart-line"></i>&nbsp; Dashboard
+      </a>
+
+      <a routerLink="/My-Batches" routerLinkActive="active">
+        <i class="fa-solid fa-user-graduate"></i>&nbsp; My Batches
+      </a>
+
+      <!-- Student Attendance Dropdown -->
+      <div class="dropdown">
+        <div class="dropdown-toggle" (click)="toggleAttendanceDropdown()">
+          <i class="fa-solid fa-person-chalkboard"></i>&nbsp; Student Attendance
+          <i class="fa-solid float-icon" [ngClass]="showAttendanceDropdown ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+        <div class="dropdown-menu" *ngIf="showAttendanceDropdown">
+          <a routerLink="/Mark-Attendance" routerLinkActive="active">➤ Mark Attendance</a>
+          <a routerLink="/View-Attendance" routerLinkActive="active">➤ View Attendance</a>
+        </div>
+      </div>
+
+      <!-- Task Management Dropdown -->
+      <div class="dropdown">
+        <div class="dropdown-toggle" (click)="toggleTaskDropdown()">
+          <i class="fa-solid fa-book"></i>&nbsp; Task Management
+          <i class="fa-solid float-icon" [ngClass]="showTaskDropdown ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+        <div class="dropdown-menu" *ngIf="showTaskDropdown">
+          <a routerLink="/Assign-Tasks" routerLinkActive="active">➤ Assign Task</a>
+          <a routerLink="/View-Tasks" routerLinkActive="active">➤ View Assigned Tasks</a>
+        </div>
+      </div>
+
+      <!-- Submissions Dropdown -->
+      <div class="dropdown">
+        <div class="dropdown-toggle" (click)="toggleSubmissionDropdown()">
+          <i class="fa-solid fa-file-lines"></i>&nbsp; Submissions
+          <i class="fa-solid float-icon" [ngClass]="showSubmissionDropdown ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+        <div class="dropdown-menu" *ngIf="showSubmissionDropdown">
+          <a routerLink="/View-Submissions" routerLinkActive="active">➤ View Submissions</a>
+          <a routerLink="/Grade-Tasks" routerLinkActive="active">➤ Grade Submissions</a>
+        </div>
+      </div>
+
+      <a routerLink="/Trainer-Profile" routerLinkActive="active">
+        <i class="fa-regular fa-user"></i>&nbsp; Profile
+      </a>
+
+      <a (click)="openLogoutModal()">
+        <i class="fa-solid fa-right-from-bracket"></i>&nbsp; Logout
+      </a>
+    </nav>
+  </div>
+
+  <!-- Logout Modal -->
+  <div class="modal-overlay" *ngIf="showLogoutModal">
+    <div class="modal-box">
+      <h3>Confirm Logout</h3>
+      <p>Are you sure you want to logout?</p>
+      <div class="modal-actions">
+        <button (click)="confirmLogout()">Yes, Logout</button>
+        <button class="cancel" (click)="cancelLogout()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
